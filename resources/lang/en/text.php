@@ -51,4 +51,6 @@ return [
     'verify_note1' => 'Before proceeding, please check your email for a verification link',
     'verify_note2' => 'If you did not receive the email',
     'verify_click' => 'Click here',
+    'home' => 'Home',
+    'hello' => 'Hello',
 ];
