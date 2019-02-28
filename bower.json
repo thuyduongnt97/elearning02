@@ -1,0 +1,22 @@
+{
+    "name": "minhchamtat",
+    "description": "",
+    "main": "",
+    "authors": [
+    "minhchamtat <minhchamtat@gmail.com>"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/minhchamtat/elearning02",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+    ],
+    "dependencies": {
+    "jquery": "~3.3.1",
+    "boostrap": "~4.3.1",
+    "components-font-awesome": "^4.7.0"
+    }
+}

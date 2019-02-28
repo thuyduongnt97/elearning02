@@ -50,4 +50,6 @@ return [
     'verify_note1' => 'Trước khi tiếp tục, vui lòng kiểm tra email của bạn để biết liên kết xác minh',
     'verify_note2' => 'Nếu bạn không nhận được email',
     'verify_click' => 'Bấm vào đây',
+    'home' => 'Trang chủ',
+    'hello' => 'Xin chào',
 ];
