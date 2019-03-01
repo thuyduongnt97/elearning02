@@ -51,10 +51,10 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPasswordC
     	return $this->hasMany(Task::class);
     }
 
-    public function classes()
-    {
-    	return $this->hasMany(Class::class);
-    }
+    // public function classes()
+    // {
+    // 	return $this->hasMany(Class::class);
+    // }
 
     public function roleUsers()
     {

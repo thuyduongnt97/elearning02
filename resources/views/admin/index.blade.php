@@ -10,7 +10,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-  
+
+    <!-- DataTables Css-->
+    <link href="{{ asset('bower_components/datatables/media/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- Font Awesome CSS -->
     <link href="{{ asset('bower_components/components-font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
 
@@ -28,7 +31,9 @@
 
         <!-- LOGO -->
         <div class="headerbar-left">
-            <a href="#" class="logo"><span>{!! __('text.hello') !!}</span></a>
+
+            <a href="index.html" class="logo"><img alt="Logo" src="{!! asset(config('config_media.backend_img.logo')) !!}" /> <span>{!! __('text.hello') !!}</span></a>
+
         </div>
 
         <nav class="navbar-custom">
@@ -68,10 +73,14 @@
     </div>
     <!-- End Sidebar -->
     <div class="content-page">
-    
-        <!-- Start content -->
-        @yield('content')
-        <!-- END content -->
+
+        <div class="content">
+            <div class="container-fluid fluid" >
+                <!-- Start content -->
+                @yield('content')
+                <!-- END content -->
+            </div>
+        </div>
 
     </div>
     <!-- END content-page -->
@@ -92,5 +101,14 @@
 <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <!-- App js -->
 <script src="{{ asset('js/pikeadmin.js') }}"></script>
+<!-- datatables -->
+<script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('bower_components/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example1').DataTable();
+    });
+</script>
 </body>
 </html>

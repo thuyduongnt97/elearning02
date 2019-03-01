@@ -53,4 +53,6 @@ return [
     'verify_click' => 'Click here',
     'home' => 'Home',
     'hello' => 'Hello',
+    'serial' => 'Serial',
+    'list_user' => 'List User',
 ];

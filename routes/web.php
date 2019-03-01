@@ -22,3 +22,15 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('user')->group(function() {
+    Route::get('list', 'UserController@getList')->name('list_user');
+
+    Route::get('add', 'UserController@getAdd')->name('add_user');
+    Route::post('add', 'UserController@postAdd')->name('add_user');
+
+    Route::get('edit/{id}', 'UserController@getEdit')->name('edit_user');
+    Route::post('edit/{id}', 'UserController@postEdit')->name('edit_user');
+
+    Route::get('delete/{id}', 'UserController@getDelete')->name('delete_user');
+});
