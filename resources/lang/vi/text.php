@@ -52,4 +52,6 @@ return [
     'verify_click' => 'Bấm vào đây',
     'home' => 'Trang chủ',
     'hello' => 'Xin chào',
+    'serial' => 'Stt',
+    'list_user' => 'Danh sách tài khoản',
 ];
