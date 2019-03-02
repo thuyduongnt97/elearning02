@@ -54,4 +54,7 @@ return [
     'hello' => 'Xin chào',
     'serial' => 'Stt',
     'list_user' => 'Danh sách tài khoản',
+    'list_lesson' => 'Danh sách bài giảng',
+    'subject' => 'Môn học',
+    'title' => 'Tiêu đề',
 ];

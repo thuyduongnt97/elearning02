@@ -18,11 +18,6 @@ class Lesson extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function classes()
-    {
-        return $this->belongsTo(Class::class);
-    }
-
     public function subjects()
     {
         return $this->belongsTo(Subject::class);
