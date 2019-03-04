@@ -10,6 +10,8 @@ class Question extends Model
         'content',
     ];
 
+    public $timestamps = false; 
+
     public function answers()
     {
         return $this->hasMany(Answer::class);

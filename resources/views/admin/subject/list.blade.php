@@ -16,27 +16,38 @@
     <div class="col-md-12 contents">
         <div class="card-body">
             <div class="row">
-            
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">                       
                     <div class="card mb-3">
+                        @if (isset($subject))
+                        {!! Form::open(['route' => ['edit_subject', $subject->id], 'method' => 'post']) !!}
+                        <div class="card-body">
+                            <div class="form-group">
+                                {{ Form::label(null, __('text.name'), ['class' => ['col-md-4', 'col-form-label', 'font-weight-bold']]) }}
+                                {!! Form::text('name', $subject->name , ['class' => 'form-control', 'data-parsley-trigger' => 'change', 'required' => 'required']) !!}
+                            </div>
+                            <div class="form-group text-right m-b-0">
+                                {!! Form::submit(__('text.edit'), ['class' => 'btn btn-info']) !!}
+                                <a href="{{ asset('subject/list') }}" class="btn btn-secondary m-l-5">{{ __('text.cancel')}}</a>
+                            </div>
+                        </div>  
+                        {!! Form::close() !!} 
+                        @else
                         {!! Form::open(['route' => 'add_subject', 'method' => 'post']) !!}
                         <div class="card-body">
                             <div class="form-group">
                                 {{ Form::label(null, __('text.name'), ['class' => ['col-md-4', 'col-form-label', 'font-weight-bold']]) }}
-                                {!! Form::text('name', null, ['class' => 'form-control', 'data-parsley-trigger' => 'change', 'required' => 'required']) !!}
+                                {!! Form::text('name', '', ['class' => 'form-control', 'data-parsley-trigger' => 'change', 'required' => 'required']) !!}
                             </div>
                             <div class="form-group text-right m-b-0">
-                                @if (isset($ma))
-                                    {!! Form::submit(__('text.edit'), ['class' => 'btn btn-info']) !!}
-                                @else
-                                    {!! Form::submit(__('text.add'), ['class' => 'btn btn-info']) !!}
-                                @endif
-                                {!! Form::submit(__('text.cancel'), ['class' => 'btn btn-secondary m-l-5', 'name' => 'cancel']) !!}
+                                {!! Form::submit(__('text.add'), ['class' => 'btn btn-info']) !!}
+                                <a href="{{ asset('subject/list') }}" class="btn btn-secondary m-l-5">{{ __('text.cancel')}}</a>
                             </div>
                         </div>  
                         {!! Form::close() !!} 
-                        <div class="card-footer" id="thongbao">
-                            @if (count($errors) > 0)
+                        @endif
+
+                        @if (count($errors) > 0)
+                        <div id="mess">
                             <div class="alert alert-danger">
                                 @foreach ($errors->all() as $message)
                                 {{ $message }}<br>
@@ -44,11 +55,10 @@
                             </div>
                             @endif
                             @if (session('success'))
-                            <div class="alert alert-success">
+                            <div class="alert alert-success" id="mess">
                                {{ session('success') }}
-                           </div>
-                           @endif
-                        </div>                       
+                            </div>
+                        @endif   
                     </div><!-- end card-->                 
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">                       
@@ -71,9 +81,9 @@
                                         <td class="center">{{ $i++ }}</td>
                                         <td class="center">{{ $ls->name }}</td>
                                         <td class="center"><a href="{{ route('edit_subject', ['id' => $ls->id]) }}" class="btn btn-success btn-sm"><i class="fa fa-pencil fa-fw"></i></a></td>
-                                        @if ($ls->sobg < 0 || $ls->soch < 0 || $ls->sobt < 0)
-                                        <td class="center"><a href="{{ route('delete_subject', ['id' => $ls->id]) }}" class="btn btn-danger btn-sm"><i class="fa fa-trash-o fa-fw"></i></a></td>
-                                        @else <td class="center"></td>
+                                        @if ($ls->sobg > 0 || $ls->soch > 0 || $ls->sobt > 0)
+                                        <td class="center"></td>
+                                        @else <td class="center"><a href="{{ route('delete_subject', ['id' => $ls->id]) }}" class="btn btn-danger btn-sm"><i class="fa fa-trash-o fa-fw"></i></a></td>
                                         @endif
                                     </tr>
                                     @endforeach
@@ -83,7 +93,6 @@
                         </div>                                                      
                     </div><!-- end card-->                  
                 </div>
-
             </div>
         </div>
     </div>

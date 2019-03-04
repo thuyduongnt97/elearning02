@@ -13,6 +13,8 @@ class Class extends Model
         'create_time',
     ];
 
+    public $timestamps = false; 
+
     public function users()
     {
         return $this->hasMany(User::class);
