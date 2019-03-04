@@ -55,4 +55,7 @@ return [
     'hello' => 'Hello',
     'serial' => 'Serial',
     'list_user' => 'List User',
+    'list_lesson' => 'List Lesson',
+    'subject' => 'Subject',
+    'title' => 'Title',
 ];

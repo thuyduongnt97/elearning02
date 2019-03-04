@@ -34,3 +34,15 @@ Route::prefix('user')->group(function() {
 
     Route::get('delete/{id}', 'UserController@getDelete')->name('delete_user');
 });
+
+Route::prefix('lesson')->group(function() {
+    Route::get('list', 'LessonController@getList')->name('list_lesson');
+
+    Route::get('add', 'LessonController@getAdd')->name('add_lesson');
+    Route::post('add', 'LessonController@postAdd')->name('add_lesson');
+
+    Route::get('edit/{id}', 'LessonController@getEdit')->name('edit_lesson');
+    Route::post('edit/{id}', 'LessonController@postEdit')->name('edit_lesson');
+
+    Route::get('delete/{id}', 'LessonController@getDelete')->name('delete_lesson');
+});
