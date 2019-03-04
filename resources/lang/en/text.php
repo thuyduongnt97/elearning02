@@ -3,6 +3,7 @@ return [
     'add' => 'Add',
     'edit' => 'Edit',
     'delete' => 'Delete',
+    'cancel' => 'Cancle',
     'link' => 'Link',
     'image' => 'Image',
     'reset' => 'Reset',

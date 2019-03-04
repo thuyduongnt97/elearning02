@@ -46,3 +46,15 @@ Route::prefix('lesson')->group(function() {
 
     Route::get('delete/{id}', 'LessonController@getDelete')->name('delete_lesson');
 });
+
+Route::prefix('subject')->group(function() {
+    Route::get('list', 'SubjectController@getList')->name('list_subject');
+
+    Route::get('add', 'SubjectController@getAdd')->name('add_subject');
+    Route::post('add', 'SubjectController@postAdd')->name('add_subject');
+
+    Route::get('edit/{id}', 'SubjectController@getEdit')->name('edit_subject');
+    Route::post('edit/{id}', 'SubjectController@postEdit')->name('edit_subject');
+
+    Route::get('delete/{id}', 'SubjectController@getDelete')->name('delete_subject');
+});

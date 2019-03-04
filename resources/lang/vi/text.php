@@ -3,6 +3,7 @@ return [
     'add' => 'Thêm',
     'edit' => 'Sửa',
     'delete' => 'Xóa',
+    'cancel' => 'Quay lại',
     'link' => 'Đường dẫn',
     'image' => 'Hình ảnh',
     'reset' => 'Quay lại',
