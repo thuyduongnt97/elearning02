@@ -19,7 +19,7 @@
             
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">                       
                     <div class="card mb-3">
-                        {!! Form::open(['route' => 'add_subject']) !!}
+                        {!! Form::open(['route' => 'add_subject', 'method' => 'post']) !!}
                         <div class="card-body">
                             <div class="form-group">
                                 {{ Form::label(null, __('text.name'), ['class' => ['col-md-4', 'col-form-label', 'font-weight-bold']]) }}
@@ -34,8 +34,22 @@
                                 {!! Form::submit(__('text.cancel'), ['class' => 'btn btn-secondary m-l-5', 'name' => 'cancel']) !!}
                             </div>
                         </div>  
-                        {!! Form::close() !!}                        
-                    </div><!-- end card-->                  
+                        {!! Form::close() !!} 
+                        <div class="card-footer" id="thongbao">
+                            @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                @foreach ($errors->all() as $message)
+                                {{ $message }}<br>
+                                @endforeach
+                            </div>
+                            @endif
+                            @if (session('success'))
+                            <div class="alert alert-success">
+                               {{ session('success') }}
+                           </div>
+                           @endif
+                        </div>                       
+                    </div><!-- end card-->                 
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">                       
                     <div class="card mb-3">

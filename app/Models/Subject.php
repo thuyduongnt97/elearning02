@@ -10,6 +10,8 @@ class Subject extends Model
         'name',
     ];
 
+    public $timestamps = false; 
+    
     public function exams()
     {
         return $this->hasMany(Exam::class);
