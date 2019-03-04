@@ -108,7 +108,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#example1').DataTable();
-        setTimeout(function(){ $('#thongbao').hide(1000); },2000);
+        setTimeout(function(){ $('#mess').hide(1000); },2000);
     });
 </script>
 </body>

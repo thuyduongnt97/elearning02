@@ -12,6 +12,8 @@ class ExamCategoryQuestion extends Model
         'quantity',
     ];
 
+    public $timestamps = false; 
+
     public function exams()
     {
     	return $this->belongsTo(Exam::class);

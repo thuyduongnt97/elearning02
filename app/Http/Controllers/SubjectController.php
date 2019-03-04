@@ -29,4 +29,30 @@ class SubjectController extends Controller
 
         return redirect('subject/list')->with('success', __('message.add'));
     }
+
+    public function getEdit($id)
+    {
+        $getList = $this->subjectRepository->list();
+        $subject = $this->subjectRepository->find($id);
+
+        return view('admin/subject/list', ['getList' => $getList, 'subject' => $subject]);
+    }
+
+    public function postEdit(AddSubjectRequest $request, $id)
+    {
+        $subject = $this->subjectRepository->find($id);
+        $subject = $this->subjectRepository->update($id, [
+            'name' => $request->name,
+        ]);
+
+        return redirect('subject/list')->with('success', __('message.edit'));
+    }
+
+    public function getDelete($id)
+    {
+        $getList = $this->subjectRepository->list();
+        $subject = $this->subjectRepository->delete($id);
+
+        return redirect('subject/list')->with('success', __('message.delete'));
+    }
 }
