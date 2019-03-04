@@ -18,4 +18,13 @@ class SubjectRepository extends EloquentRepository
         
         return $result;
     }
+
+    function insert($name)
+    {
+    	$result = new $this->model;
+    	$result->name = $name;
+    	$result->save();
+    }
 }
+
+

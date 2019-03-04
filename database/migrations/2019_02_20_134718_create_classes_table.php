@@ -20,8 +20,6 @@ class CreateClassesTable extends Migration
             $table->string('status', 20);
             $table->date('create_time')->nullable();
             $table->unsignedInteger('user_id');
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
@@ -32,10 +30,6 @@ class CreateClassesTable extends Migration
      */
     public function down()
     {
-        Schema::table('classes', function (Blueprint $table) {
-            $table->dropForeign('classes_user_id_foreign');
-        });
-
         Schema::dropIfExists('classes');
     }
 }

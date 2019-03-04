@@ -14,8 +14,7 @@ class UpdateUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedInteger('class_id');
-            $table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedInteger('class_id')->nullable();
         });
     }
 
@@ -27,7 +26,6 @@ class UpdateUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('users_class_id_foreign');
             $table->dropColumn('class_id');
         });
     }
