@@ -58,4 +58,7 @@ return [
     'list_lesson' => 'Danh sách bài giảng',
     'subject' => 'Môn học',
     'title' => 'Tiêu đề',
+    'content' => 'Nội dung',
+    'add_lesson' => 'Thêm bài giảng',
+    'file' => 'Tệp',
 ];

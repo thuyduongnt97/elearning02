@@ -15,6 +15,19 @@
 <div class="row">
     <div class="col-md-12 contents">
         <div class="card-body">
+            @if (count($errors) > 0)
+            <div id="mess">
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $message)
+                    {{ $message }}<br>
+                    @endforeach
+                </div>
+                @endif
+                @if (session('success'))
+                <div class="alert alert-success" id="mess">
+                   {{ session('success') }}
+                </div>
+            @endif
             <div class="form-group">
                 <div class="form-group float-right">
                     <a href="{{ route('add_lesson') }}" class="btn btn-info pull-right">{{ __('text.add') }}</a>

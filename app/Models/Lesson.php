@@ -9,6 +9,8 @@ class Lesson extends Model
     protected $fillable = [
         'title',
         'content',
+        'subject_id',
+        'user_id',
         'file',
         'create_time',
     ];
