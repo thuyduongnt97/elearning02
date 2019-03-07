@@ -12,7 +12,11 @@ class Task extends Model
         'filelog',
         'correct_answer',
         'point',
+        'exam_id',
+        'user_id',
     ];
+
+    public $timestamps = false;
 
     public function users()
     {

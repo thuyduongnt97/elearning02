@@ -71,4 +71,39 @@ class LessonController extends Controller
         
         return view('admin/lesson/add', ['lesson_id' => $lesson_id, 'subject' => $subject]);
     }
+
+    public function postEdit(LessonRequest $request, $id)
+    {
+        $lesson_id = $this->lessonRepository->find($id);
+        $user = Auth::id();
+        if (!is_null($request->file('file'))) {
+            $file = $request->file('file');
+            $file->move(config('app.lesson_path'), $file->getClientOriginalName());
+            $lesson = $this->lessonRepository->update($id, [
+                'title' => $request->title,
+                'user_id' => $user,
+                'subject_id' => $request->subject,
+                'content' => $request->content,
+                'file' => $request->file->getClientOriginalName(),
+            ]);
+        }
+        else {
+            $lesson = $this->lessonRepository->update($id, [
+                'title' => $request->title,
+                'user_id' => $user,
+                'subject_id' => $request->subject,
+                'content' => $request->content,
+            ]);
+        }
+        
+        return redirect('lesson/list')->with('success', __('message.edit'));
+    }
+
+    public function getDelete($id)
+    {
+        $lesson = $this->lessonRepository->list();
+        $lesson_id = $this->lessonRepository->delete($id);
+
+        return redirect('lesson/list')->with('success', __('message.delete'));
+    }
 }
