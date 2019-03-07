@@ -11,6 +11,7 @@ class Class extends Model
         'content',
         'status',
         'create_time',
+        'user_id',
     ];
 
     public $timestamps = false; 

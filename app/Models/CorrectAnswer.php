@@ -10,6 +10,11 @@ class CorrectAnswer extends Model
 
     public $timestamps = false; 
 
+    protected $fillable = [
+        'question_id',
+        'answer_id',
+    ];
+
     public function questions()
     {
         return $this->belongsTo(Question::class);

@@ -8,6 +8,8 @@ class Question extends Model
 {
     protected $fillable = [
         'content',
+        'category_id',
+        'subject_id',
     ];
 
     public $timestamps = false; 

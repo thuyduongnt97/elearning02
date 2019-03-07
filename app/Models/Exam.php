@@ -10,6 +10,8 @@ class Exam extends Model
         'exam_time',
         'create_time',
         'status',
+        'user_id',
+        'subject_id',
     ];
 
     public $timestamps = false; 

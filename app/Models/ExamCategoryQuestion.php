@@ -10,6 +10,8 @@ class ExamCategoryQuestion extends Model
 
     protected $fillable = [
         'quantity',
+        'category_question_id',
+        'exam_id',
     ];
 
     public $timestamps = false; 
