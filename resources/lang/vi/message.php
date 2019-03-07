@@ -43,4 +43,7 @@ return [
     'priority.Integer' => 'Độ ưu tiên phải là một số',
     'comment_require' => 'Bạn chưa nhập bình luận',
     'comment_min' => 'Bình luận tối thiểu 3 ký tự',
+    'title_required' => 'Bạn chưa nhập tiêu đề.',
+    'file_required' => 'Bạn chưa chọn file.',
+    'subject_required' => 'Bạn chưa chọn chủ đề.',
 ];

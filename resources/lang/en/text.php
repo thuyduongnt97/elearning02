@@ -59,4 +59,7 @@ return [
     'list_lesson' => 'List Lesson',
     'subject' => 'Subject',
     'title' => 'Title',
+    'content' => 'Content',
+    'add_lesson' => 'Add Lesson',
+    'file' => 'File',
 ];

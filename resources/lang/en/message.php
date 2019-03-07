@@ -39,4 +39,7 @@ return [
     'priority.Integer' => 'Priority must be Integer',
     'comment_require' => 'Please enter your comment',
     'comment_min' => 'Comment must be at least 3 characters',
+    'title_required' => 'Title field is required.',
+    'file_required' => 'File field is required.',
+    'subject_required' => 'Subject field is required.',
 ];

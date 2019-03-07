@@ -17,4 +17,5 @@ class LessonRepository extends EloquentRepository
 
         return $result;
     }
+
 }
