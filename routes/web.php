@@ -58,3 +58,12 @@ Route::prefix('subject')->group(function() {
 
     Route::get('delete/{id}', 'SubjectController@getDelete')->name('delete_subject');
 });
+
+Route::prefix('question')->group(function() {
+    Route::get('list', 'QuestionController@getList')->name('list_question');
+
+    Route::get('add', 'QuestionController@getAdd')->name('add_question');
+    Route::post('add', 'QuestionController@postAdd')->name('add_question');
+
+    Route::get('download', 'QuestionController@getDown')->name('download');
+});

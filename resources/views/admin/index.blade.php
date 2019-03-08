@@ -28,7 +28,6 @@
 
     <!-- top bar navigation -->
     <div class="headerbar">
-
         <!-- LOGO -->
         <div class="headerbar-left">
 
@@ -37,7 +36,6 @@
         </div>
 
         <nav class="navbar-custom">
-
             <ul class="list-inline menu-left mb-0">
                 <li class="float-left">
                     <button class="button-menu-mobile open-left">
@@ -45,35 +43,57 @@
                     </button>
                 </li>                        
             </ul>
-
         </nav>
-
     </div>
     <!-- End Navigation -->
-    
- 
     <!-- Left Sidebar -->
     <div class="left main-sidebar">
-    
         <div class="sidebar-inner leftscroll">
-
             <div id="sidebar-menu">
-        
             <ul>
+                <li class="submenu">
+                    <a class="active" href="index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                </li>
+
+                <li class="submenu">
+                    <a href="{{ asset('subject/list') }}"><i class="fa fa-fw fa fa-server"></i><span> {{ __('text.subject') }} </span> </a>
+                </li>
+                
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-fw fa-table"></i> <span> {{ __('text.lesson') }} </span> <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ asset('lesson/list') }}">{{ __('text.list_lesson') }}</a></li>
+                        <li><a href="{{ asset('lesson/add') }}">{{ __('text.add_lesson') }}</a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-fw fa-file-text-o"></i> <span> {{ __('text.question') }} </span> <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ asset('question/list') }}">{{ __('text.list_question') }}</a></li>
+                        <li><a href="{{ asset('question/add') }}">{{ __('text.add_question') }}</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu">
+                    <a href="#"><i class="fa fa-fw fa-clone"></i> <span> {{ __('text.exam') }} </span> <span class="menu-arrow"></span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ asset('exam/list') }}">{{ __('text.list_exam') }}</a></li>
+                        <li><a href="{{ asset('exam/add') }}">{{ __('text.add_exam') }}</a></li>
+                    </ul>
+                </li>
+                
+                <li class="submenu">
+                    <a href="{{ asset('user/list') }}"><i class="fa fa-fw fa-user"></i><span> {{ __('text.list_user') }} </span> </a>
+                </li>
             </ul>
-
             <div class="clearfix"></div>
-
             </div>
         
             <div class="clearfix"></div>
-
         </div>
-
     </div>
     <!-- End Sidebar -->
     <div class="content-page">
-
         <div class="content">
             <div class="container-fluid fluid" >
                 <!-- Start content -->
@@ -81,7 +101,6 @@
                 <!-- END content -->
             </div>
         </div>
-
     </div>
     <!-- END content-page -->
     
