@@ -67,3 +67,7 @@ Route::prefix('question')->group(function() {
 
     Route::get('download', 'QuestionController@getDown')->name('download');
 });
+
+Route::prefix('pato')->group(function() {
+    Route::get('home', 'FrontendController@home')->name('home');
+});

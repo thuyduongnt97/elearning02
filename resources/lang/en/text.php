@@ -74,4 +74,7 @@ return [
     'exam' => 'Exam',
     'list_exam' => 'List exam',
     'add_exam' => 'Add exam',
+    'contact' => 'Contact',
+    'web' => 'Website',
+    'facebook' => 'Facebook',
 ];
