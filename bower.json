@@ -18,6 +18,8 @@
     "jquery": "~3.3.1",
     "boostrap": "~4.3.1",
     "components-font-awesome": "^4.7.0",
-    "datatables.net-plugins": "datatables-plugins#^1.10.19"
+    "datatables.net-plugins": "datatables-plugins#^1.10.19",
+    "animsition": "^4.0.2",
+    "select2": "^4.0.5"
   }
 }

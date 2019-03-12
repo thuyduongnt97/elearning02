@@ -73,4 +73,7 @@ return [
     'exam' => 'Đề thi',
     'list_exam' => 'Danh sách đề thi',
     'add_exam' => 'Thêm đề thi',
+    'contact' => 'Thông tin',
+    'web' => 'Website',
+    'facebook' => 'Facebook',
 ];
